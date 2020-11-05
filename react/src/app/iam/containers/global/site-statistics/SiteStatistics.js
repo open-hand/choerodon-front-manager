@@ -79,8 +79,7 @@ export default class SiteStatistics extends Component {
               <Select
                 style={{ width: 'calc(100% - 60px)', marginLeft: 'calc(16px + 6%)', marginRight: '16px' }}
                 value={SiteStatisticsStore.currentLevel}
-                // eslint-disable-next-line react/no-find-dom-node
-                getPopupContainer={() => findDOMNode(this.ref.current)}
+                // getPopupContainer={() => findDOMNode(this.ref.current)}
                 onChange={this.handleChange.bind(this)}
                 label={<FormattedMessage id={`${intlPrefix}.belong`} />}
               >
@@ -329,7 +328,6 @@ export default class SiteStatistics extends Component {
     const momentTime = moment(new Date().getTime());
     return `平台菜单统计-${momentTime.format('YYYYMMDDHHmm')}.csv`;
   };
-
 
   render() {
     return (
