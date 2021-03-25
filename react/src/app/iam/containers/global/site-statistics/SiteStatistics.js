@@ -21,7 +21,7 @@ const colorArr = ['#FDB34E', '#5266D4', '#FD717C', '#53B9FC', '#F44336', '#6B83F
 @injectIntl
 @inject('AppState', 'MenuStore')
 @observer
-export default class SiteStatistics extends Component {
+export class SiteStatistics extends Component {
   componentDidMount() {
     SiteStatisticsStore.setCurrentLevel('site');
     this.handleRefresh();
@@ -358,3 +358,13 @@ export default class SiteStatistics extends Component {
     );
   }
 }
+
+const SiteStatisticsIndex = () => (
+  <Permission
+    service={['choerodon.code.site.operation.manager.menu-statistics.ps.default']}
+  >
+    <SiteStatistics />
+  </Permission>
+);
+
+export default SiteStatisticsIndex;
