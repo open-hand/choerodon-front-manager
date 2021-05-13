@@ -5,7 +5,7 @@ import { findDOMNode } from 'react-dom';
 import { inject, observer } from 'mobx-react';
 import { injectIntl, FormattedMessage } from 'react-intl';
 import { withRouter } from 'react-router-dom';
-import { axios, Content, Header, Page, Breadcrumb, Permission } from '@choerodon/boot';
+import { axios, Content, Header, Page, Breadcrumb, Permission, HeaderButtons } from '@choerodon/boot';
 import { Button, Table, Select, Spin } from 'choerodon-ui';
 import moment from 'moment';
 import ReactEcharts from 'echarts-for-react';
@@ -339,15 +339,16 @@ export class SiteStatistics extends Component {
         <Header
           title={<FormattedMessage id={`${intlPrefix}.header.title`} />}
         >
-          <Permission service={['choerodon.code.site.operation.manager.menu-statistics.ps.export']}>
-            <Button
-              onClick={this.clickDownload}
-              icon="get_app"
-            >
-              导出表格csv文件
-            </Button>
-            <a id="download" download="site-statistics.csv" href="#" />
-          </Permission>
+          <HeaderButtons
+            items={([{
+              name: '导出表格csv文件',
+              icon: 'get_app',
+              display: true,
+              permissions: ['choerodon.code.site.operation.manager.menu-statistics.ps.export'],
+              handler: this.clickDownload,
+            }])}
+            showClassName={false}
+          />
         </Header>
         <Breadcrumb />
         <Content ref={this.ref}>
