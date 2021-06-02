@@ -178,7 +178,7 @@ export class SiteStatistics extends Component {
       title: {
         text: formatMessage({ id: `${intlPrefix}.menu.count` }),
         textStyle: {
-          color: 'rgba(0,0,0,0.87)',
+          color: 'rgba(15, 19, 88, 0.87)',
           fontWeight: '400',
         },
         top: 20,
