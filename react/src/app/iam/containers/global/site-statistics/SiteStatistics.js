@@ -342,7 +342,7 @@ export class SiteStatistics extends Component {
           <HeaderButtons
             items={([{
               name: '导出表格csv文件',
-              icon: 'get_app',
+              icon: 'unarchive-o',
               display: true,
               permissions: ['choerodon.code.site.operation.manager.menu-statistics.ps.export'],
               handler: this.clickDownload,
