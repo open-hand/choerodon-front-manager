@@ -9,6 +9,7 @@ import { axios, Content, Header, Page, Breadcrumb, Permission, HeaderButtons } f
 import { Button, Table, Select, Spin } from 'choerodon-ui';
 import moment from 'moment';
 import ReactEcharts from 'echarts-for-react';
+import { saveAs } from 'file-saver';
 import './SiteStatistics.scss';
 import SiteStatisticsStore from '../../../stores/global/site-statistics';
 import TimePicker from '../../../components/timePicker';
@@ -317,10 +318,7 @@ export class SiteStatistics extends Component {
         str += `\n${v.name},${v.code},${v.sum},${intl.formatMessage({ id: v.level })}`;
       });
       str = encodeURIComponent(str);
-      const aLink = document.getElementById('download');
-      aLink.download = this.getDownloadName();
-      aLink.href = `data:text/csv;charset=utf-8,\ufeff${str}`;
-      aLink.click();
+      saveAs(`data:text/csv;charset=utf-8,\ufeff${str}`, this.getDownloadName())
     });
   };
 
