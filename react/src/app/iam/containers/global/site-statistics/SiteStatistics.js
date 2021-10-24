@@ -5,12 +5,12 @@ import { findDOMNode } from 'react-dom';
 import { inject, observer } from 'mobx-react';
 import { injectIntl, FormattedMessage } from 'react-intl';
 import { withRouter } from 'react-router-dom';
-import { axios, Content, Header, Page, Breadcrumb, Permission, HeaderButtons } from '@choerodon/boot';
-import { Button, Table, Select, Spin } from 'choerodon-ui';
+import { Content, Header, Page, Breadcrumb, Permission, HeaderButtons } from '@choerodon/boot';
+import { Table, Select, Spin } from 'choerodon-ui';
 import moment from 'moment';
 import ReactEcharts from 'echarts-for-react';
 import { saveAs } from 'file-saver';
-import './SiteStatistics.scss';
+import './SiteStatistics.less';
 import SiteStatisticsStore from '../../../stores/global/site-statistics';
 import TimePicker from '../../../components/timePicker';
 
