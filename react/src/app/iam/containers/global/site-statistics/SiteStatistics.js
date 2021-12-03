@@ -15,7 +15,7 @@ import SiteStatisticsStore from '../../../stores/global/site-statistics';
 import TimePicker from '../../../components/timePicker';
 
 const { Option } = Select;
-const intlPrefix = 'global.site-statistics';
+const intlPrefix = 'c7n.site-statistics';
 const colorArr = ['#FDB34E', '#5266D4', '#FD717C', '#53B9FC', '#F44336', '#6B83FC', '#B5D7FD', '#00BFA5']; // 默认取色
 
 @withRouter
@@ -201,7 +201,7 @@ export class SiteStatistics extends Component {
           return `<div>
               <div>${params.name}</div>
               <div><span class="c7n-iam-sitestatics-charts-tooltip" style="background-color:${params.color};"></span>${params.seriesName}</div>
-              <div>次数: ${params.value}</div>
+              <div>${formatMessage({ id: 'boot.times' })}: ${params.value}</div>
             <div>`;
         },
       },
@@ -280,7 +280,7 @@ export class SiteStatistics extends Component {
         {
           type: 'value',
           minInterval: 1,
-          name: '次数',
+          name: formatMessage({ id: 'boot.times' }),
           nameLocation: 'end',
           nameTextStyle: {
             color: '#000',
@@ -339,7 +339,7 @@ export class SiteStatistics extends Component {
         >
           <HeaderButtons
             items={([{
-              name: '导出表格csv文件',
+              name: <FormattedMessage id={`${intlPrefix}.export`} />,
               icon: 'unarchive-o',
               display: true,
               permissions: ['choerodon.code.site.operation.manager.menu-statistics.ps.export'],

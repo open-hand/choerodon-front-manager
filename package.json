@@ -19,8 +19,8 @@
     "react-copy-to-clipboard": "^5.0.2"
   },
   "devDependencies": {
-    "@choerodon/boot": "0.23.1",
-    "@choerodon/master": "1.1.0",
+    "@choerodon/boot": "1.2.0",
+    "@choerodon/master": "1.2.0",
     "babel-eslint": "8.2.6",
     "babel-preset-c7n": "^0.0.2",
     "eslint-config-c7n-app": "^0.0.1"

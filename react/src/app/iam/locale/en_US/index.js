@@ -245,6 +245,10 @@ const en_US = {
 
   // 菜单配置
   'menu.createDir': 'Create Dir',
+  'time.seven.days': 'Nearly 7 days',
+  'time.fifteen.days': 'Nearly 15 days',
+  'time.thirty.days': 'Nearly 30 days',
 };
 /* eslint-disable-next-line */
-export default en_US;
+export {en_US as manager_en_US};
+export * from './site-statistics';

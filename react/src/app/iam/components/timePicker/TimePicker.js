@@ -61,15 +61,13 @@ export default class TimePicker extends Component {
     const { type } = this.state;
     const btnInfo = [
       {
-        // name: intl.formatMessage({ id: 'time.seven.days' }),
-        name: '近7天',
+        name: intl.formatMessage({ id: 'time.seven.days' }),
         value: 7,
       }, {
-        // name: intl.formatMessage({ id: 'time.fifteen.days' }),
-        name: '近15天',
+        name:intl.formatMessage({ id: 'time.fifteen.days' }),
         value: 15,
       }, {
-        name: '近30天',
+        name: intl.formatMessage({ id: 'time.thirty.days' }),
         value: 30,
       },
     ];

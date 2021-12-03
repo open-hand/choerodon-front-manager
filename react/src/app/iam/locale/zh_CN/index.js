@@ -1118,12 +1118,10 @@ const zh_CN = {
   'global.apioverview.belong.empty': '无服务',
 
   // 菜单分析
-  'global.site-statistics.header.title': '菜单分析',
-  'global.site-statistics.menu.count': '菜单点击统计',
-  'global.site-statistics.belong': '所属层级',
-  'global.site-statistics.table.name': '菜单名称',
-  'global.site-statistics.table.code': '菜单编码',
-  'global.site-statistics.table.click-sum': '菜单点击总数',
+  'c7n.site-statistics.header.title': '菜单分析',
+
+  
+ 
 
   // 发送设置
   'sendsetting.header.title': '发送设置',
@@ -1779,4 +1777,5 @@ const zh_CN = {
 
 };
 /* eslint-disable-next-line */
-export default zh_CN;
+export  {zh_CN as manager_zh_CN} ;
+export * from './site-statistics';
